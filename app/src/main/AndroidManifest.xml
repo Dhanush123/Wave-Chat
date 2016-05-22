@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.jonas.stopcollaboratelisten"
+      android:versionCode="21"
+      android:versionName="5.0">
+    <application android:icon="@drawable/icon" android:label="@string/app_name"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name="Main"
+                  android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        
+
+			<intent-filter android:label="StopCollaborateListen">
+                 <action android:name="android.intent.action.SEND" />
+                  <data android:mimeType="text/*" />
+                  <category android:name="android.intent.category.DEFAULT" />
+             </intent-filter>
+             
+      </activity>
+      
+      <service 
+      	android:name=".SessionService"
+      	android:icon="@drawable/icon"
+      	android:label="@string/service_name">
+      </service><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+    </application>
+    
+    <uses-sdk android:targetSdkVersion="23" android:minSdkVersion="21"/>
+
+<uses-permission android:name="android.permission.RECORD_AUDIO"></uses-permission>
+
+</manifest> 
